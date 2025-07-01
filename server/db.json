@@ -2,36 +2,43 @@
   "nodes": [
     {
       "id": "1",
+      "type": "custom",
       "position": { "x": 0, "y": 50 },
       "data": { "label": "Prod DB (Table: PolicyCenter)", "notes": "" }
     },
     {
       "id": "2",
+      "type": "custom",
       "position": { "x": 0, "y": 150 },
       "data": { "label": "Prod DB (Table: Mainframe)", "notes": "" }
     },
     {
       "id": "3",
+      "type": "custom",
       "position": { "x": 250, "y": 100 },
       "data": { "label": "Staging DB", "notes": "Transformation: Sum all" }
     },
     {
       "id": "4",
+      "type": "custom",
       "position": { "x": 500, "y": 100 },
       "data": { "label": "Export DB", "notes": "Table: Premiums, Field: GWP" }
     },
     {
       "id": "5",
+      "type": "custom",
       "position": { "x": 750, "y": 100 },
       "data": { "label": "OneStream", "notes": "Blended Import File" }
     },
     {
       "id": "6",
+      "type": "custom",
       "position": { "x": 1000, "y": 100 },
       "data": { "label": "OneStream Calc", "notes": "Cubeview Seeded Calculation" }
     },
     {
       "id": "7",
+      "type": "custom",
       "position": { "x": 1250, "y": 100 },
       "data": { "label": "10-K Line: \"Gross Written Premium\"", "notes": "" }
     }

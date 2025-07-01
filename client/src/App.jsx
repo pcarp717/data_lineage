@@ -6,7 +6,12 @@ import ReactFlow, {
   applyEdgeChanges,
   addEdge
 } from 'reactflow';
+import CustomNode from './CustomNode.jsx';
 import 'reactflow/dist/style.css';
+
+const nodeTypes = {
+  custom: CustomNode,
+};
 
 function App() {
   const [nodes, setNodes] = useState([]);
@@ -83,6 +88,7 @@ function App() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={nodeTypes}
         fitView
       >
         <Background />
