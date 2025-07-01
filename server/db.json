@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "position": { "x": 0, "y": 50 },
+      "data": { "label": "Prod DB (Table: PolicyCenter)", "notes": "" }
+    },
+    {
+      "id": "2",
+      "position": { "x": 0, "y": 150 },
+      "data": { "label": "Prod DB (Table: Mainframe)", "notes": "" }
+    },
+    {
+      "id": "3",
+      "position": { "x": 250, "y": 100 },
+      "data": { "label": "Staging DB", "notes": "Transformation: Sum all" }
+    },
+    {
+      "id": "4",
+      "position": { "x": 500, "y": 100 },
+      "data": { "label": "Export DB", "notes": "Table: Premiums, Field: GWP" }
+    },
+    {
+      "id": "5",
+      "position": { "x": 750, "y": 100 },
+      "data": { "label": "OneStream", "notes": "Blended Import File" }
+    },
+    {
+      "id": "6",
+      "position": { "x": 1000, "y": 100 },
+      "data": { "label": "OneStream Calc", "notes": "Cubeview Seeded Calculation" }
+    },
+    {
+      "id": "7",
+      "position": { "x": 1250, "y": 100 },
+      "data": { "label": "10-K Line: \"Gross Written Premium\"", "notes": "" }
+    }
+  ],
+  "edges": [
+    { "id": "e1-3", "source": "1", "target": "3" },
+    { "id": "e2-3", "source": "2", "target": "3" },
+    { "id": "e3-4", "source": "3", "target": "4" },
+    { "id": "e4-5", "source": "4", "target": "5" },
+    { "id": "e5-6", "source": "5", "target": "6" },
+    { "id": "e6-7", "source": "6", "target": "7" }
+  ]
+}
