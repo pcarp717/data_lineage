@@ -53,6 +53,19 @@ function App() {
     [setEdges]
   );
 
+  const onAdd = useCallback(() => {
+    const newNode = {
+      id: `node-${+new Date()}`,
+      type: 'custom',
+      position: {
+        x: Math.random() * (window.innerWidth - 200),
+        y: Math.random() * (window.innerHeight - 200),
+      },
+      data: { label: 'New Node', notes: '' },
+    };
+    setNodes((nds) => nds.concat(newNode));
+  }, [setNodes]);
+
   const onSave = useCallback(() => {
     const dataflow = { nodes, edges };
     fetch('/api/dataflow', {
@@ -81,7 +94,10 @@ function App() {
 
   return (
     <div style={{ height: '100vh', width: '100vw' }}>
-        <button onClick={onSave} style={{ position: 'absolute', top: 10, right: 10, zIndex: 4 }}>Save</button>
+        <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 4 }}>
+          <button onClick={onAdd} style={{ marginRight: '5px' }}>Add Node</button>
+          <button onClick={onSave}>Save</button>
+        </div>
       <ReactFlow
         nodes={nodes}
         edges={edges}
